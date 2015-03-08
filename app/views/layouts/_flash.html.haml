@@ -1,0 +1,14 @@
+-if flash[:warning].present? || flash[:alert].present?
+  .alert.alert-warning
+    %button.close{:type => "button", :'data-dismiss' => "alert"}
+      &times;
+    %strong
+      Warning:
+    = flash[:warning] || flash[:alert]
+
+- if flash[:notice].present?
+  .alert.alert-success
+    %button.close{:type => "button", :'data-dismiss' => "alert"}
+      &times;
+    %strong
+      =flash[:notice]

@@ -9,6 +9,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'haml-rails'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'pry-rails'

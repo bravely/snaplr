@@ -513,8 +513,8 @@
       "/Users/quaunaut/Documents/snaplr/spec/factories/users.rb": [
         1,
         1,
-        null,
-        null,
+        1,
+        1,
         null,
         null
       ],
@@ -591,6 +591,8 @@
       ],
       "/Users/quaunaut/Documents/snaplr/app/controllers/dashboard_controller.rb": [
         1,
+        1,
+        null,
         null
       ],
       "/Users/quaunaut/Documents/snaplr/app/controllers/application_controller.rb": [
@@ -599,19 +601,8 @@
         null,
         1,
         null
-      ],
-      "/Users/quaunaut/Documents/snaplr/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        2,
-        null,
-        null
       ]
     },
-    "timestamp": 1425850387
+    "timestamp": 1425850529
   }
 }
