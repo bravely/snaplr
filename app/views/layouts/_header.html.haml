@@ -1,0 +1,26 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{ type: 'button', data: { toggle: 'collapse', target: '#core-navbar' } }
+        %span.sr-only Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Snaplr', root_path, class: 'navbar-brand'
+
+    #core-navbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li
+            = link_to edit_user_registration_path do
+              %span.sr-only Account Settings
+              %span.glyphicon.glyphicon-cog
+          %li
+            = link_to destroy_user_session_path, method: :delete do
+              %span.sr-only Logout
+              %span.glyphicon.glyphicon-log-out
+        - else
+          %li
+            = link_to user_session_path do
+              %span.sr-only Login
+              %span.glyphicon.glyphicon-log-in
