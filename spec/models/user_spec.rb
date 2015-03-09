@@ -6,4 +6,8 @@ RSpec.describe User, type: :model do
     it { should have_db_column(:email).of_type(:string) }
     it { should have_db_column(:email).with_options(null: false) }
   end
+
+  describe '#posts' do
+    it { should have_many(:posts) }
+  end
 end
