@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :find_user, only: [:new, :create]
+
   def new
     @post = current_user.posts.new
     render 'posts/form'
@@ -10,6 +12,10 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def find_user
+    @user = User.find(params[:user_id])
+  end
 
   def post_params
     params.require(:post).permit([

@@ -1,4 +1,4 @@
-=form_for([current_user, @workout]) do |f|
+=form_for([@user, @post]) do |f|
   .form-group
     =f.text_field :title, placeholder: 'Title(optional)', class: 'form-control', autofocus: true
   .form-group
