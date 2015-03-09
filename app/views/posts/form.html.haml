@@ -1,0 +1,8 @@
+=form_for([@user, @post]) do |f|
+  .form-group
+    =f.text_field :title, placeholder: 'Title(optional)', class: 'form-control', autofocus: true
+  .form-group
+    =f.text_area :body, placeholder: "What's up?", class: 'form-control', required: true
+  %button.btn.btn-default.btn-primary{ type: 'submit' }
+    %span.glyphicon.glyphicon-check
+    Submit Post

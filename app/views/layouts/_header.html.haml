@@ -9,6 +9,12 @@
       = link_to 'Snaplr', root_path, class: 'navbar-brand'
 
     #core-navbar.collapse.navbar-collapse
+      - if user_signed_in?
+        %ul.nav.navbar-nav.navbar-left
+          %li
+            = link_to new_user_post_path(current_user) do
+              %span.sr-only New Post
+              %span.glyphicon.glyphicon-plus
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
