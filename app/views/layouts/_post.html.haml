@@ -3,5 +3,5 @@
     .panel-heading
       %h3.panel-title=post.title
   .panel-body
-    %h5="#{user.email}:"
+    %h5=link_to "#{user.email}:", user_path(user)
     %p=post.body
