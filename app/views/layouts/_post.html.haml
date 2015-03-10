@@ -1,0 +1,7 @@
+.panel.panel-default
+  -if post.title
+    .panel-heading
+      %h3.panel-title=post.title
+  .panel-body
+    %h5="#{user.email}:"
+    %p=post.body

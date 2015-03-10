@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :posts, only: [:new, :create]
   end
 
+  get '/public', to: 'dashboard#public'
   root to: 'dashboard#index'
 end
