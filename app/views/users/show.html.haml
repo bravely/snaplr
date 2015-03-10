@@ -1,3 +1,11 @@
+%h3= @user.email
+- if @user.follows?(current_user)
+  %b Follows You
+- if @relationship
+  =link_to 'Unfollow', unfollow_user_path(@user), class: 'btn btn-primary'
+- else
+  =link_to 'Follow', follow_user_path(@user), class: 'btn btn-default'
+%hr
 - @posts.each do |post|
   .panel.panel-default
     -if post.title
