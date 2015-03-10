@@ -12,6 +12,10 @@
       - if user_signed_in?
         %ul.nav.navbar-nav.navbar-left
           %li
+            = link_to public_path do
+              %span.sr-only Public Feed
+              %span.glyphicon.glyphicon-asterisk
+          %li
             = link_to new_user_post_path(current_user) do
               %span.sr-only New Post
               %span.glyphicon.glyphicon-plus

@@ -1,1 +1,11 @@
-%h4 index
+-if current_user
+  %h1 Dashboard
+  - @posts.each do |post|
+    =render partial: 'layouts/post', locals: { post: post, user: post.user }
+-else
+  .panel.panel-success
+    .panel-heading
+      %h4 Do you wish you could post cat pictures with the people helping you go over your morgage?
+    .panel-body
+      %b Of course you do!
+      =link_to 'So sign up for Snaplr today!', new_user_registration_path
