@@ -1,6 +1,9 @@
-=form_for([@user, @post]) do |f|
+=form_for [@user, @post], html: { multipart: true } do |f|
   .form-group
     =f.text_field :title, placeholder: 'Title(optional)', class: 'form-control', autofocus: true
+  .form-group
+    =f.label :photo, 'Picture'
+    =f.file_field :photo
   .form-group
     =f.text_area :body, placeholder: "What's up?", class: 'form-control', required: true
   %button.btn.btn-default.btn-primary{ type: 'submit' }

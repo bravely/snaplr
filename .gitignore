@@ -14,3 +14,8 @@
 
 # Ignore SimpleCov files.
 /coverage
+
+# Ignore uploaded assets.
+/public/system
+
+.DS_Store

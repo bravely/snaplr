@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'unicorn'
 gem 'haml-rails'
 gem 'bootstrap-sass'
+gem 'paperclip', '~> 4.2'
 
 group :development, :test do
   gem 'pry-rails'
